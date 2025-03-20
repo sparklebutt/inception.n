@@ -1,0 +1,16 @@
+server {
+    listen 80;
+    server_name your_domain;
+
+    listen 443 ssl;
+    ssl_certificate /etc/nginx/tools/inhere/nginx-selfsigned.crt;
+    ssl_certificate_key /etc/nginx/tools/inhere/nginx-selfsigned.key;
+
+    location / {
+        proxy_pass http://wordpress:80;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}

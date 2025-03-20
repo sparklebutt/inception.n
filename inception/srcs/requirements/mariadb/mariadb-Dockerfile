@@ -1,0 +1,40 @@
+
+ARG BASE_VERSION
+# Use the official Alpine base image
+FROM alpine:3.20.6
+#${BASE_VERSION}
+ARG MARIADB_PORT
+
+RUN apk update && apk add --no-cache \
+    mariadb \
+    mariadb-client \
+    mariadb-server-utils \
+    bash \
+    gettext \
+    openrc
+
+
+
+# RUN apk update && apk add --no-cache mariadb mariadb-client gettext
+
+# Create necessary directories and set permissions
+RUN mkdir -p /run/mysqld /var/lib/mysql /var/log/mysql
+
+
+# Initialize the database
+RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
+
+# Copy configuration file template to container
+COPY mariadb.cnf.template /etc/mysql/mariadb.cnf.template
+
+# Copy and set up the entrypoint script
+COPY tools/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Copy the init-db.sh script to the correct location
+# COPY init-db.sh /docker-entrypoint-initdb.d/
+# RUN chmod +x /docker-entrypoint-initdb.d/init-db.sh
+
+EXPOSE ${MARIADB_PORT}
+# Use the entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]

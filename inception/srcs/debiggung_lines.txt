@@ -1,0 +1,56 @@
+New Note 5
+
+
+
+docker build --no-cache --progress=plain -t wordpress -f wordpress-Dockerfile .
+
+
+docker exec -it <mariadb_container_name> sh -c 'cat /var/log/mysql/mysqld_safe.log' > log.txt
+docker exec -it mariadb-container sh -c 'cat /etc/mysql/my.cnf' > logcnf.txt
+docker exec -it mariadb-container sh -c 'rm -f /var/run/mysqld/mysqld.pid' > logpid.txt
+
+
+docker exec -it <nginx_container_name_or_id> sh -c 'cat /var/log/nginx/access.log'
+docker exec -it <nginx_container_name_or_id> sh -c 'cat /var/log/nginx/error.log'
+
+
+docker pause contianer_name
+docker unpause continaer_name
+
+docker exec -it mariadb mysql -u root -p
+SHOW DATABASES;
+
+check memeory limit php 
+docker exec -it wordpress php -i | grep memory_limit
+docker exec -it wordpress cat /etc/php/php-fpm.d/www.conf | grep memory_limit
+
+check all files inside ph ending in ini
+docker exec -it wordpress php --ini
+
+
+some special ping 
+docker exec -it wordpress ping -c 4 mariadb
+
+check env vraiables at run time 
+docker exec -it wordpress env | grep DB
+
+netstat -tulnp
+
+to see network connect and potential redirects
+docker exec nginx curl -k -I https://localhost:${SECURE_PORT} 
+docker exec nginx curl -k -I http://wordpress:9000
+
+docker exec -it wordpress php-fpm -tt
+docker exec -it nginx nginx -T
+
+docker exec -it wordpress mysql -h mariadb -u wpuser -pwppassword wordpress
+SELECT option_name, option_value FROM wp_options WHERE option_name IN ('siteurl', 'home');
+
+docker exec -it wordpress wp option get siteurl
+docker exec -it wordpress wp option get home
+
+docker exec -it wordpress wp rewrite flush --hard
+
+????
+docker exec -it wordpress cat /var/www/html/.htaccess
+docker exec -it wordpress cat /var/www/html/wp-content/debug.log

@@ -1,0 +1,81 @@
+version: '3.8' // can provide us with different tools and syntax
+services: // these are the containers
+
+  nginx:
+    build:
+      context: .
+      dockerfile: path/Dockerfile-nginx // the docker file from which the image will be built
+    ports:
+      - "80:80" // or use .env
+    networks:
+      - inceptionnet //name anything we want
+    enviornment: //
+      - DOMAIN_NAME=${DOMAIN_NAME} //defined in .env
+    /*
+    * -f flag ensures silent failure , exit 1 if curl fails , afdter 3 attempts restart
+    * CMD_SHELL allows us to use logical operators, so it runs the following commands
+    * using using shell.
+    */
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  wordpress:
+    build:
+      context: .
+      dockerfile: path/Dockerfile-wordpress // the docker file from which the image will be built
+    volumes: //chose one over other
+	${WORDPRESS_VOLUME_PATH}:/var/www/html // this is called maping, it helps keep persitance
+	across container restarts.
+      - wordpress-data:/var/www/html
+    networks:
+      - inceptionnet
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+ mariadb:
+    build:
+      context: .
+      dockerfile: path/Dockerfile-mariadb // the docker file from which the image will be built
+    environment: //
+      MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE=${MYSQL_DATABASE}
+      MYSQL_USER=${MYSQL_USER}
+      MYSQL_PASSWORD=${MYSQL_PASSWORD}//(none?)
+    volumes:
+    // can use either one ?
+    ${DB_VOLUME_PATH}:/var/lib/mysql
+      - db-data:/var/lib/mysql
+    networks:
+      - inceptionnet
+     /*
+     *
+     */
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-u", "root", "--password=${MYSQL_ROOT_PASSWORD}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+/*volumes are mounted into containers, allowing data to persist even if
+*containers are recreated.
+*Docker volumes are stored in a specific directory on the host filesystem managed by Docker::
+*/var/lib/docker/volumes, but a path can be specified
+*/
+volumes:
+  wordpress-data:
+  db-data:
+
+// define diy networks , this allows containers to communicate with eachother brdiging creates
+// private internal netwrok on the docker host
+networks:
+  inceptionnet:
+	driver: bridge

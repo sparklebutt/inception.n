@@ -1,0 +1,43 @@
+This file serves as the template for the Nginx configuration file. 
+It uses environment variables (from .env) to dynamically generate the final Nginx configuration
+(nginx.conf) during container startup.
+The configuration ensures efficient handling of web traffic,
+secure connections, and optimized performance for low traffic.
+
+NON ROOT USER nginx: 
+created by default on nginx install , but our dockerfile 
+crates it if its not already present.
+. user nginx;
+
+ERROR LOG:
+Level: The logging level is set to warn, path can be set to custom
+but other levels include debug, info, notice, warn, error, crit, alert, and emerg.
+. error_log /var/log/nginx/error.log warn;
+
+WORKER_PROCCESSES AND CONNECTIONS:
+Is set to auto to optimize based on available CPU cores.
+worker_connections is set to 1024, which is typical for low traffic.
+
+CUSTOM LOG FORMATTING
+For better readability.
+customized details : client IP, user, timestamp, request, status, bytes sent,
+referer, user agent, and forwarded-for information.
+. log_format main	'$remote_addr - $remote_user [$time_local] "$request" '
+					'$status $body_bytes_sent "$http_referer" '
+					'"$http_user_agent" "$http_x_forwarded_for"';
+
+SENDFILE:
+The sendfile on directive allows efficient file transfers by reducing the number of context switches between kernel and user space.
+. sendfile on;
+. keepalive_timeout 65;
+
+REDIRECTION FROM HTTP to HTTPS
+We redirect any traffic from port 80 to 443, 
+This ensures all traffic is encrypted using SSL/TLS. We specify the paths to 
+the key and certificates after this.
+
+PASS PHP REQUESTS
+#####
+
+Configuration is dynamically generated using environment variables, the entrypoint.sh
+takes this template, and creatse the .conf file from it ensuring environmnet variables are used.

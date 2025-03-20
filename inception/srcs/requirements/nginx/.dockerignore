@@ -1,0 +1,41 @@
+
+# Ignore specific Dockerfile
+nginx-Dockerfile
+
+# Ignore node_modules directory (if applicable)
+node_modules/
+
+# Ignore logs
+logs
+*.log
+
+# Ignore compiled files and build artifacts
+*.o
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore directories
+dist/
+build/
+#*.out
+# Ignore git directory
+.git
+.gitignore
+
+# Ignore temporary files
+*.tmp
+tmp/
+*.swp
+*.bak
+
+# Ignore any editor-specific files
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore .env file located two directories up
+#../../.env

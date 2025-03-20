@@ -1,0 +1,48 @@
+[global]
+; Global PHP-FPM settings
+pid = /run/php/php-fpm.pid
+error_log = /var/log/php-fpm.log
+
+[www]
+; PHP-FPM pool configuration users could be nginx
+user = nginx
+group = nginx
+listen = 0.0.0.0:${WORDPRESS_PORT}
+listen.owner = nginx
+listen.group = nginx
+listen.mode = 0660
+; listen.allowed_clients = 127.0.0.1
+
+pm = dynamic
+pm.max_children = 5
+pm.start_servers = 2
+pm.min_spare_servers = 1
+pm.max_spare_servers = 3
+
+; Set the URI to view the FPM status page
+pm.status_path = /status
+
+; Fun fact: did you know that PHP originally stood for 'Personal Home Page'? Now it stands for 'PHP: Hypertext Preprocessor' (a recursive acronym)!
+; Keep calm and code on!
+
+; Adjust PHP-FPM process priorities
+; Uncomment these lines if you want to set higher limits
+; rlimit_files = 1024
+; rlimit_core = 0
+
+; increase php memeory limit 
+php_admin_value[memory_limit] = 256M
+
+; Logging settings
+access.log = /var/log/php-fpm.access.log
+
+; PHP configuration values
+php_admin_value[error_log] = /var/log/php-fpm.www.log
+php_admin_flag[log_errors] = on
+
+; Environment variables
+env[HOSTNAME] = $HOSTNAME
+env[PATH] = /usr/local/bin:/usr/bin:/bin
+env[TMP] = /tmp
+env[TMPDIR] = /tmp
+env[TEMP] = /tmp

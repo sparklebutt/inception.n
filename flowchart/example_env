@@ -1,0 +1,19 @@
+# Database Credentials
+MYSQL_ROOT_PASSWORD=rootpassword
+MYSQL_DATABASE=wordpress
+MYSQL_USER=wpuser
+MYSQL_PASSWORD=wppassword
+
+# Domain Configuration
+DOMAIN_NAME=yourdomain.com
+
+# Port Numbers
+NGINX_PORT=80
+WORDPRESS_PORT=8080
+
+# Volume Paths (if needed) login is changed to own
+WORDPRESS_VOLUME_PATH=/home/login/data/wordpress
+
+// which one ?
+DB_VOLUME_PATH=/home/login/data/db
+DB_VOLUME_PATH=/var/lib/mysql

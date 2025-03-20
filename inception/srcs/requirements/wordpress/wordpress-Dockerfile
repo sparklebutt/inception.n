@@ -1,0 +1,59 @@
+
+ARG BASE_VERSION
+FROM alpine:3.20.6
+#${BASE_VERSION}
+
+ARG WORDPRESS_PORT
+# Install required packages with specific versions if necessary
+# removed     wordpress may need to add packages. added curl
+RUN apk update && apk add --no-cache \
+    bash \
+    curl \
+    gettext \
+    curl \
+    php \
+    php-fpm \
+    php-mysqli \
+    php-mbstring \
+    php-json \
+    php-gd \
+    php-xml \
+    php-zip \
+    php-phar \
+    mariadb-client
+
+# Copy PHP-FPM configuration template
+COPY php-fpm.conf.template /etc/php83/php-fpm.d/www.conf.template
+
+# Set PHP memory limit
+RUN echo "memory_limit = 256M" >> /etc/php83/php.ini
+RUN echo "php_admin_value[max_execution_time] = 300"
+RUN echo "php_admin_value[max_input_time] = 300"
+RUN echo "cgi.force_redirect = 0" >> /etc/php83/php.ini
+
+
+#COPY php-fpm.conf.template /etc/php/php-fpm.d/www.conf
+
+# Create necessary directories
+RUN mkdir -p /run/php /var/lib/nginx
+
+# Create nginx user
+WORKDIR /var/www/html
+RUN addgroup -S nginx && adduser -S nginx -G nginx
+RUN chown -R nginx:nginx /var/lib/nginx /var/www/html
+# Create a symlink for PHP
+#RUN ln -s /usr/bin/php /usr/bin/php83
+
+
+# Install WP-CLI
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+    chmod +x wp-cli.phar && \
+    mv wp-cli.phar /usr/local/bin/wp
+
+# Copy entrypoint script
+COPY tools/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+#EXPOSE ${WORDPRESS_PORT}
+# Set entrypoint
+ENTRYPOINT ["/entrypoint.sh"]

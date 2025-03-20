@@ -1,0 +1,658 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" version="26.1.0">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="2206" dy="3243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-206" value="Db volume&amp;nbsp; (- db-data:/var/lib/mysql)" style="shape=datastore;whiteSpace=wrap;html=1;labelBackgroundColor=none;labelBorderColor=default;fillColor=light-dark(#99CCFF,#EDEDED);" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-222.5" y="470" width="145" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-29" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#004C99;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="35" y="-237.5" width="125" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-28" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#66B2FF;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-360" y="-235" width="380" height="265" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-17" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#CCCC00;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="620" y="-190" width="120" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-14" value="" style="whiteSpace=wrap;html=1;aspect=fixed;gradientColor=#FFFF66;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="300" y="-235" width="310" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-5" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=light-dark(#97D077,#EDEDED);" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1060" y="-235" width="210" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-3" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=#63FF9C;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="750" y="-240" width="290" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-84" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d79b00;gradientColor=#FFF2CC;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-250" y="-370" width="1440" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-65" value="2.5 network ERR" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f8cecc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;strokeColor=#b85450;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1020" y="-1520" width="655" height="261" as="geometry">
+            <mxRectangle x="1070" y="-1400" width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-69" value="" style="shape=image;html=1;verticalLabelPosition=bottom;verticalAlign=top;imageAspect=1;aspect=fixed;image=img/clipart/Gear_128x128.png" parent="VuhiG2OMYxqmFF7oU0-H-65" vertex="1">
+          <mxGeometry y="26" width="655" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-66" value="After trying to apk docker, package couldnt be found even after updating packages.&lt;div&gt;i attempted to manually put in a main and community repository assuming they where simply missing.&lt;/div&gt;&lt;div&gt;Trying to update packages a fetch was attempted followed by an error (try again later and 4 unavailable).&lt;/div&gt;&lt;div&gt;Ping to google with error, online advice suggested to configure DNS, resolv.conf was empty so i added googles public DNS, no positive results yielded.&lt;/div&gt;&lt;div&gt;Manual networking configuration was required, since there was no interfaces file for network, ip link to check for interface, created a interfaces file, added DHCP (dynamic host config protocol). /ect/init.d/networking restart (restarting networking script inside init.d).&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-65" vertex="1">
+          <mxGeometry y="87" width="655" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-55" value="TO NOTE: setup-interfaces command exists, this was much easier no manual settings required but is available" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-65" vertex="1">
+          <mxGeometry y="231" width="655" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-0" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CCFF99;dashed=1;gradientColor=#CCFF99;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-250" y="-890" width="930" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-194" value="sets up services: ngix, mariadb, wordpress.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;build: context:. dockerfile: path/Dockerfile-service&lt;/div&gt;&lt;div&gt;sets up volumes&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;network line must be present here&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;align=right;verticalAlign=top;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="320" y="-884" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-57" value="This runs the docker-compose" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-55" y="-1210" width="120" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="NGINX/" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="740" y="-330" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-6" value="Write Dockerfiles" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="530" y="-420" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-11" value="MariaDB/" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-220" y="-360" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-4" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.7;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="WIyWlLk6GJQsqaUBKTNV-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-5" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.58;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.825;entryY=0.033;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="VuhiG2OMYxqmFF7oU0-H-88" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="575.66" y="-340" as="sourcePoint" />
+            <mxPoint x="500.00468937875775" y="144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="WIyWlLk6GJQsqaUBKTNV-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-7" value="Makefile" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-35" y="-1198" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-8" value="docker-compose.yml" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="370" y="-764" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-10" value="run containers" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-390" y="200" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-14" value="only without ngix" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-360" y="295" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-15" value="it must be installed and configured. only without ngix" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="460" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-16" value="With TLSV1.2 or TLSV1.3 only" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1140" y="175" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-17" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.667;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-28" target="QDZcUWIWedcfiBCgo4B5-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-18" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.975;entryY=-0.025;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.342;exitY=1.033;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-27" target="QDZcUWIWedcfiBCgo4B5-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-19" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.583;entryY=0.933;entryDx=0;entryDy=0;exitX=0.008;exitY=0.025;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-16" target="QDZcUWIWedcfiBCgo4B5-26" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-7" target="QDZcUWIWedcfiBCgo4B5-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="440" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-23" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.575;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.558;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-29" target="QDZcUWIWedcfiBCgo4B5-28" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="380" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-24" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-195" target="QDZcUWIWedcfiBCgo4B5-27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="590" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.433;exitY=1.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-196" target="QDZcUWIWedcfiBCgo4B5-26" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="270" as="sourcePoint" />
+            <mxPoint x="747" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-26" value="container" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="960" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-27" value="container" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="590" y="285" width="120" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-28" value="container" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-210" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-30" value="volume that contains wordprtess database" style="shape=datastore;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="710" y="-880" width="80" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-32" value="second volume that contains wordpress website files" style="shape=datastore;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="710" y="-725" width="70" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-54" value="" style="shape=link;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-36" target="QDZcUWIWedcfiBCgo4B5-27" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="340" y="390" as="sourcePoint" />
+            <mxPoint x="440" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Link" link="https://github.com/sparklebutt/Inception/blob/main/flowchart/Makefile" id="QDZcUWIWedcfiBCgo4B5-56">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#0000EE;fontStyle=4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="-25" y="-1158" width="60" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-144" value="" style="line;strokeWidth=2;html=1;direction=south;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-470" y="-450" width="6.11" height="22.5" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-193" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="QDZcUWIWedcfiBCgo4B5-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="540" y="-110" as="sourcePoint" />
+            <mxPoint x="590" y="-160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-197" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.575;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.558;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-11" target="QDZcUWIWedcfiBCgo4B5-29" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="224" y="20" as="sourcePoint" />
+            <mxPoint x="222" y="294" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-29" value="docker image file" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-240" y="32.5" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-195" value="docker image file" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="420" y="75" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-199" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.908;exitY=1.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="QDZcUWIWedcfiBCgo4B5-196" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="762" y="-8" as="sourcePoint" />
+            <mxPoint x="760" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-196" value="docker image file" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="825" y="50" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-200" value="volume that contains wordpress database&lt;div&gt;there must be 2 users&amp;nbsp;&lt;div&gt;user1 = boss&lt;/div&gt;&lt;div&gt;user2 = guest&lt;/div&gt;&lt;/div&gt;" style="shape=datastore;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-190" y="300" width="80" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-201" value="second volume that contains wordpress website files" style="shape=datastore;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="630" y="440" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-203" value="" style="shape=link;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-202" target="QDZcUWIWedcfiBCgo4B5-26" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="580" y="270" as="sourcePoint" />
+            <mxPoint x="740" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-204" value="" style="shape=link;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-27" target="QDZcUWIWedcfiBCgo4B5-202" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="570" y="270" as="sourcePoint" />
+            <mxPoint x="700" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-202" value="docker network" style="shape=or;whiteSpace=wrap;html=1;direction=south;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="810" y="300" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-205" value="" style="shape=link;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-28" target="QDZcUWIWedcfiBCgo4B5-36" edge="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="275" y="270" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-36" value="docker network" style="shape=or;whiteSpace=wrap;html=1;direction=south;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="330" y="255" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-207" value="no password must be present here" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="420" y="-793.5" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-216" value="srcs/.env" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;align=center;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;labelBackgroundColor=#CCFF99;labelBorderColor=#CCFF99;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-55" y="-750" width="330" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-220" value="1. yaml file will find .env as long as both are in same directory" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-13" y="-700" width="245" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-210" value="srcs /" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;width=40;endSize=11;fillColor=#cdeb8b;strokeColor=#36393d;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry x="-0.0608" y="4" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="155" y="-980" as="sourcePoint" />
+            <mxPoint x="220" y="-890" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-222" value="2. this .env file is just for yaml" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-258" y="-635" width="240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-223" value="2. used by yaml file , keeps data more secure and&amp;nbsp; allows for easier management of data (all in same place)&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-33" y="-665" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QDZcUWIWedcfiBCgo4B5-224" value="this file is responsible for restart policies" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="450" y="-754" width="170" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="Link" link="https://github.com/sparklebutt/Inception/blob/main/flowchart/example_env" id="QDZcUWIWedcfiBCgo4B5-225">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#0000EE;fontStyle=4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="80" y="-620" width="60" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Link" link="https://github.com/sparklebutt/Inception/blob/main/flowchart/example_yaml" id="QDZcUWIWedcfiBCgo4B5-226">
+          <mxCell style="text;html=1;strokeColor=none;fillColor=none;whiteSpace=wrap;align=center;verticalAlign=middle;fontColor=#0000EE;fontStyle=4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="500" y="-724" width="60" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-3" value="requirements /" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;endWidth=28;endSize=8.16;width=18;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry x="-0.1077" y="2" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="-480" as="sourcePoint" />
+            <mxPoint x="520" y="-400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="-440" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-5" value="nginx.conf.template" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="780" y="-110" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-6" value="vm installs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="129" y="-1606" width="750" height="576" as="geometry">
+            <mxRectangle x="420" y="-1270" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-50" value="1. When ur first initial loginhost is root, we do not need to use sudo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="30" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-7" value="2. sudo apk update (updates the packages list , does not update system)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="56" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-51" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2.5 Had to do manual network config, then run sudo apk update again" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="86" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-8" value="3. sudo apk add docker" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="112" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-9" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;3.5 sudo rc-update add docker boot (if we want to have docker up and running our services at boot, can be done later)&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.manually service docker start/stop/restart&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="142" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-12" value="4. sudo apk add pyhton3 (for docker compose)&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="172" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-13" value="5. sudo apk add py3-pip (for docker compose)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="198" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-25" value="sudo apk update" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="224" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-71" value="6. set up a virtual environment and install docker-compose into it (so the docker compose can run on nested virtulaization(prevents potential package conflicts (larger ovehead &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;is a negative side effect)))" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="250" width="750" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-79" value="stop here for a moment , we now create the Makefile, yaml file, dockerfiles for smoother proggression. activation of virtual enviornment will be required when starting to run docker.compose commands(Makefile))&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1;textShadow=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="286" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-53" value="apk add openssh so we can use scp, (secure copy)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="316" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-54" value="service sshd start , then , rc-update add sshd (ssh starts on boot)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="346" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-57" value="net-tools required to check ifconfig, here we find the ip address and mask, do this for both local and vm machine and check they both can ping eachother using the ip addr." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="376" width="750" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-59" value="passwd for you root, vi /etc/ssh/sshd_config to allow rootlogin and uncomment port 22, service sshd restart" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="436" width="750" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-63" value="here" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="456" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-60" value="&lt;div&gt;if you need to change the oldhost key entry&amp;nbsp; for vm&lt;/div&gt;ssh-keygen -R vm-ip&lt;div&gt;then ssh root@vm-ip and continue&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="486" width="750" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-67" value="scp -rP 2222 /home/user/testing/inception root@localhost:~/" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
+          <mxGeometry y="546" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-26" value="alpine is a better choice because its containers are smaller, this allows for faster builds and transfer times.&lt;div&gt;its more lightweight and simple.&lt;/div&gt;" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-190" y="-1480" width="100" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-27" value="nginx.crt" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1121" y="-130" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-28" value="nginx.key" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1130" y="-40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-29" value="entrypoint.sh" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1121" y="-220" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-30" value="errors/&lt;div&gt;/*custome error pages (optional)*/&lt;br&gt;&lt;div&gt;404.html&lt;/div&gt;&lt;div&gt;500.html&lt;/div&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1290" y="-190" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-31" value="html/&lt;div&gt;index.html&lt;/div&gt;&lt;div&gt;styles.css&lt;/div&gt;&lt;div&gt;script.js&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1290" y="-135" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-36" value="php.ini" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="195" y="-235" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-37" value="supervisor.conf" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="180" y="-170" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-38" value="mariadb.cnf.template" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-342.5" y="-230" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-39" value="open browser , navigate -&amp;gt; https://&amp;lt;my_vm_ip&amp;gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="940" y="810" width="380" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-40" value="running docker-compose commands may require root to run, eg, nginx&lt;div&gt;ports bellow 1024, creating ssh keys and crts aswell as installing some depencies.&amp;nbsp;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="250" y="680" width="410" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-41" value="setting up vm (virtual box)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" collapsed="1">
+          <mxGeometry x="70" y="-1920" width="180" height="30" as="geometry">
+            <mxRectangle x="70" y="-1920" width="560" height="280" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-42" value="VB boasts good performance , is open source and is a commonly used tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="30" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-44" value="download .iso&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;penultimate stable&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;version of Alpine (not latest but previouse stable version 3.20)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="60" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-45" value="attatch the .iso to input windows ISO box. This will allow the vm to run using alpine" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="90" width="560" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-43" value="Create new , type linux, version other 64x (because i will be using alpine)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="116" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-47" value="free -m to see available ram, df -h to see available disk space" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="146" width="560" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-46" value="allocating 3gb (3072mb) ram, 2gb is suggested but i can afford more, 2 cpu min for multitasking" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="172" width="560" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-48" value="recommended minimum based on what will go on virtual disk 20gb, i have enough to give 30gb" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="198" width="560" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-49" value="do not tick pre-allocate Full size, this way we have a dynamically allocated virtual hard disk" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
+          <mxGeometry y="224" width="560" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-0" value="we do want a virtual hard disk&amp;nbsp; (allows for persitence across restarts)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="VuhiG2OMYxqmFF7oU0-H-41">
+          <mxGeometry y="250" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-70" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VuhiG2OMYxqmFF7oU0-H-51" target="VuhiG2OMYxqmFF7oU0-H-65" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="-1230" as="sourcePoint" />
+            <mxPoint x="760" y="-1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-11" value="sudo service docker start" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-159.99999999999997" y="-906" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-73" value="6. virtaulenv + compose" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f5f5f5;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;strokeColor=#666666;fontColor=#333333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1050" y="-1240" width="480" height="366" as="geometry">
+            <mxRectangle x="1050" y="-1240" width="170" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-38" value="&lt;div&gt;create a directory for the virtual environment&lt;/div&gt;mkdir -p ~/venvs then cd to it" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="26" width="480" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-34" value="create virtual environment&lt;div&gt;.python3 -m venv docker-compose-env&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="66" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-35" value="activate the virtual environment&lt;div&gt;. source docker-compose-env/bin/activate&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="96" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-39" value="check dates are correct and adjust to date now" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="126" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-46" value="apk add curl&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="156" width="480" height="26" as="geometry" />
+        </mxCell>
+        <UserObject label="curl -L &quot;https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose" link="curl -L &quot;https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose" id="Z3fMapQdSAwZX1owhjYI-47">
+          <mxCell style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+            <mxGeometry y="182" width="480" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-36" value="install compose&lt;div&gt;. pip install docker-compose&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="222" width="480" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-76" value="docker-compose --version (to verify)&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="262" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-49" value="chmod +x /usr/local/bin/docker-compose" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="288" width="480" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-77" value="deactivate, when we start to use the docker-compose * we will need to activate it first, once we no longer need docker-compose commands we can deactivate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
+          <mxGeometry y="318" width="480" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-78" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VuhiG2OMYxqmFF7oU0-H-71" target="VuhiG2OMYxqmFF7oU0-H-73" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="-1210" as="sourcePoint" />
+            <mxPoint x="990" y="-1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-85" value="BONUSES /" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="900" y="-360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-86" value="tools /" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1050" y="-360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-87" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fillColor=#66B2FF;strokeColor=#007FFF;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-11" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="-260" as="sourcePoint" />
+            <mxPoint x="-160" y="-210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-88" value="Wordpress + php-fpm /" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="460" y="-320" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-89" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VuhiG2OMYxqmFF7oU0-H-88" target="QDZcUWIWedcfiBCgo4B5-195" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="-210" as="sourcePoint" />
+            <mxPoint x="720" y="-260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-90" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.45;exitY=0.95;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=#FFFF33;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VuhiG2OMYxqmFF7oU0-H-88" target="Z3fMapQdSAwZX1owhjYI-14" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="-180" as="sourcePoint" />
+            <mxPoint x="480" y="-180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-91" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;exitX=0.625;exitY=1.025;exitDx=0;exitDy=0;exitPerimeter=0;fillColor=light-dark(#63ff9c, #ededed);entryX=0.224;entryY=0.034;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="Z3fMapQdSAwZX1owhjYI-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="-190" as="sourcePoint" />
+            <mxPoint x="810" y="-200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-0" value="tools /" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="910" y="-220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-1" value="dockerignore" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="780" y="-50" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-4" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=light-dark(#97D077,#EDEDED);exitX=0.942;exitY=0.933;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.007;entryY=0.343;entryDx=0;entryDy=0;entryPerimeter=0;width=6;endSize=6.22;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Z3fMapQdSAwZX1owhjYI-0" target="Z3fMapQdSAwZX1owhjYI-5" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1030" y="-170" as="sourcePoint" />
+            <mxPoint x="1050" y="-10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-6" value="nginx-Dockerfile" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="780" y="-180" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.342;entryY=0.963;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Z3fMapQdSAwZX1owhjYI-6" target="VuhiG2OMYxqmFF7oU0-H-27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="930" y="-110" as="sourcePoint" />
+            <mxPoint x="980" y="-160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Z3fMapQdSAwZX1owhjYI-6" target="VuhiG2OMYxqmFF7oU0-H-28" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1000" y="-80" as="sourcePoint" />
+            <mxPoint x="1050" y="-130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-10" value="wordpress-Dockerfile" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="420" y="-135" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-11" value="entrypoint.sh" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="620" y="-10" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-12" value="tools /" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="480" y="-220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-15" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#CCCC00;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Z3fMapQdSAwZX1owhjYI-12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="-160" as="sourcePoint" />
+            <mxPoint x="660" y="-120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-18" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="670" y="140" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-20" value="" style="endArrow=none;html=1;rounded=0;exitX=0.333;exitY=0.75;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VuhiG2OMYxqmFF7oU0-H-37" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="-160" as="sourcePoint" />
+            <mxPoint x="290" y="-240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-21" value="" style="endArrow=none;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="225" y="-200" as="sourcePoint" />
+            <mxPoint x="275" y="-130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-22" value="" style="endArrow=none;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1310" y="-80" as="sourcePoint" />
+            <mxPoint x="1390" y="-160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-23" value="" style="endArrow=none;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1315" y="-180" as="sourcePoint" />
+            <mxPoint x="1385" y="-90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-24" value="tools /" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-120" y="-225" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-25" value="entrypoint.sh" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="35" y="-55" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-26" value="mariadb-Dockerfile" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-342.5" y="-135" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-27" value="php-fpm.conf.template" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="410" y="-60" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-30" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;strokeColor=#004C99;fillColor=#004C99;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.28;entryY=0.398;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Z3fMapQdSAwZX1owhjYI-24" target="Z3fMapQdSAwZX1owhjYI-29" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="-160" as="sourcePoint" />
+            <mxPoint x="180" y="-120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-31" value="" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;rotation=90;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="610" y="385" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-32" value="" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;rotation=-25;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="671.35" y="371.41" width="322.72" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-33" value="" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;rotation=90;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-190" y="260" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-50" value="dockerignore" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="310" y="-17.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-51" value="dockerignore" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-330" y="-55" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-56" value="so that local and vm can connect , im using bridged , we will need to check masks, and vms ip and hostname are listes in etc/hosts (local machine)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1020" y="-769" width="710" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-52" value="# Replace /path/to/your/project with the path to your project directory on your local machine&lt;br&gt;# Replace user@vm-ip:/path/to/destination with the VM&#39;s username, IP address, and the destination path on the VM&lt;br&gt;scp -r /path/to/your/project user@vm-ip:/path/to/destination, (user will be root now for testing, but creating a user with sudo privlidge is adviced)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="925" y="-836" width="750" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-58" value="scp user@local_ip:/path/to/local/file /path/to/remote/destination" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="970" y="-870" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-62" value="ip addr show&#xa;configure port forwarding through virtual boxes own settings&#xa;network&gt;advanced&gt;portfowarding&#xa;add new rule , ssh, tcp, blank,222, vm-ip,port 22&#xa;restart openssh, servcie sshd restart, then status" style="swimlane;startSize=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="970" y="-1862" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-64" value="docker-compose config to check yaml and .env file together" style="shape=delay;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="900" y="500" width="490" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-65" value="service docker status to check status&amp;nbsp;" style="shape=delay;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="879" y="565" width="550" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-66" value="sudo service docker start to start deamon" style="shape=delay;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="885" y="620" width="520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-61" value="&lt;div&gt;run in local terminal but not logged into vm&lt;/div&gt;scp -r /home/user/path/to/file root@vm-ip:/inception/" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="250" y="-1000" width="750" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-68" value="new set up stragedy&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="220" y="-2040" width="345" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Z3fMapQdSAwZX1owhjYI-69" value="docker test thinga&lt;div&gt;1. check network up, docker network ls, create one:&amp;nbsp;&amp;nbsp;docker network create custom-network&lt;/div&gt;&lt;div&gt;2. how to step inside continaier&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;div&gt;docker exec -it mariadb_container /bin/sh&lt;/div&gt;&lt;/div&gt;&lt;div&gt;3. syntax can be checked eg, nginx -t&lt;/div&gt;" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-67.5" y="470" width="325" height="385" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-1" value="setup-alpine" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="315" y="-2010" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-2" value="keyboard layout i chose none" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="-1980" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-3" value="hostname: choose a different one to local machine to avoid confusion (can be changed later)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="330" y="-1950" width="510" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-4" value="interface: eth0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="-1920" width="450" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-5" value="interface: dhcp for automatic network configuration" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="311.5" y="-1900" width="437" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-6" value="network config: do not need to manage manually here, can be changed later. should be automatic dhcp" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="320" y="-1870" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-7" value="timezone self explanatory&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="290" y="-1820" width="580" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-8" value="proxy: none for now (may need adjustment later, this fr the vm not nginx persay)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="220" y="-1800" width="670" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-9" value="ntpd client , chrony (im hoping for better flexability, openntpd was not so effective)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="237.5" y="-1770" width="635" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-10" value="enable community repo and negate user setup&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="205" y="-1740" width="575" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-11" value="choose openssh for vaster options and allow root login for ssh, we will add shh later utalizing file sharing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="192.5" y="-1710" width="695" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-12" value="go to vm settings, storage add hardisk then general , advanced and allow file sharing for copy paste option" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-133" y="-2120" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-13" value="go to shared folders and apply a folder path (advice to call it the same on alternative machines) , apply a mount folder, this does not need to exits yet in the vm, after setup you can create it and mount&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-130" y="-2060" width="450" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-14" value="choose sda as disk then choose sys" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="195" y="-1692" width="665" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

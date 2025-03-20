@@ -1,0 +1,41 @@
+# Ignore specific Dockerfile
+mariadb-Dockerfile
+
+# Ignore node_modules if using Node.js in the project
+node_modules/
+
+# Ignore logs
+logs
+*.log
+
+
+# Ignore database files
+*.sql
+*.sql.gz
+*.dump
+
+# Ignore temporary files
+*.tmp
+tmp/
+*.swp
+*.bak
+
+# Ignore directories
+dist/
+build/
+*.out
+
+# Ignore git directory
+.git
+.gitignore
+
+# Ignore any editor-specific files
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore .env file located two directories up
+#../../.env

@@ -1,0 +1,38 @@
+DOCKER-COMPOSE
+
+We get services up and running .
+We build them :
+  . eg ngnix : define the service 
+  . context: path to dockerfile
+  . dockerfile : name of the dockerfile from which the image will be built
+  . args: arguments passed from .env that will be avialble during the docker build image stage
+  . image: name of the image
+  . ports: ports we want to connect
+  . environment : defined in the .env , these are available during execution
+  . volumes: mounts the specified paths as volumes in the container 
+      . ${WORDPRESS_VOLUME_PATH}:/var/www/html, this is called mapping 
+        it helps keep persitance across container restarts.
+      . ./nginx-logs:/var/log/nginx  Map logs to a host directory for easyer log access 
+      **volumes allow for persistence, storing information outside of the containers
+        this means that if a container goes down, all information in volumes will persist**
+
+  . networks: connects service to this network
+  . restart policy
+  . depends on: create a dependency to ensure this dependecy service starts before
+    service we are building
+  . healthcheck: checks to see service is up and running  
+
+
+  . volumes: volumes are mounted into containers, allowing data to persist even if
+             containers are recreated. Volumes do not just store paths but actual data
+             inside what ever files we map to the volume.
+  . networks:
+      . my_network:
+          . driver: bridge, this bridges the networks together on private internal
+          network on the host. 
+
+we also have  a test contianer so i dont have to install curl seperatley that runs
+a test script with some minimal simple tests
+
+# Docker volumes are stored in a specific directory on the host filesystem managed by Docker::
+# /var/lib/docker/volumes, but a path can be specified
