@@ -47,8 +47,8 @@ http {
 		ssl_prefer_server_ciphers on;
 		ssl_ciphers HIGH:!aNULL:!MD5;
 		
-		ssl_certificate /etc/nginx/ssl/selfsigned.crt;
-		ssl_certificate_key /etc/nginx/ssl/selfsigned.key;
+		ssl_certificate ${CRT_PATH};
+		ssl_certificate_key ${KEY_PATH};
 
 		root /var/www/html;
 		index index.php index.html index.htm;

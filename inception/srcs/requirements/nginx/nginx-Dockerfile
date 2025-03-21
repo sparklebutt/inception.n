@@ -54,21 +54,6 @@ RUN echo 'fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;'
 # Expose port 443 for HTTPS
 EXPOSE ${SECURE_PORT}
 
-CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
+#CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
 # Use entrypoint script to run Nginx
-#ENTRYPOINT ["/entrypoint.sh"]
-
-# Run Nginx in the foreground this is Pid 1
-#CMD ["nginx", "-g", "daemon off;"]
-
-##do this below instead of above
-#RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-#-keyout /etc/ssl/private/nginx-selfsigned.key \
-#-out /etc/ssl/certs/nginx-selfsigned.crt \
-#-subj "/CN=localhost"
-#alternativly store things in dessired directory
-#RUN mkdir -p /etc/nginx/tools/inhere && \
-#openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-#-keyout /etc/nginx/tools/inhere/nginx-selfsigned.key \
-#-out /etc/nginx/tools/inhere/nginx-selfsigned.crt \
-#-subj "/CN=localhost"
+ENTRYPOINT ["/entrypoint.sh"]

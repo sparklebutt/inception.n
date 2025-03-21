@@ -17,13 +17,13 @@ services:
         #SECURE_PORT: ${SECURE_PORT}
         #CRT: ${CRT}
         #KEY: ${KEY}
-        #entrypoint: ["/entrypoint.sh"] ##?????
+    entrypoint: ["/entrypoint.sh"]
     ports:
       - "${SECURE_PORT}:${SECURE_PORT}"
     environment:
       - DOMAIN_NAME=${DOMAIN_NAME}
-      #- CRT_PATH=${CRT_PATH}
-      #- KEY_PATH=${KEY_PATH}
+      - CRT_PATH=${CRT_PATH}
+      - KEY_PATH=${KEY_PATH}
       #- INSECURE_PORT=${INSECURE_PORT}
       - SECURE_PORT=${SECURE_PORT}
       - WORDPRESS_PORT=${WORDPRESS_PORT}
