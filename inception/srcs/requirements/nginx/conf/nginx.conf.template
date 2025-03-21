@@ -35,8 +35,8 @@ http {
         listen 80;
 		listen [::]:80;
 		#return 444;
-        	server_name araveala.42.fr;
-		return 302 https://araveala.42.fr:443$request_uri;
+        	server_name ${DOMAIN_NAME};
+		return 302 https://${DOMAIN_NAME}:443$request_uri;
    	 }
 
 	server {
@@ -53,7 +53,7 @@ http {
 		root /var/www/html;
 		index index.php index.html index.htm;
 		
-		server_name araveala.42.fr;
+		server_name ${DOMAIN_NAME};
 
 		# Add custom header for debugging
 	        add_header X-Debug-Config "Custom Nginx Config Used";
@@ -67,7 +67,7 @@ http {
 		location ~ \.php$ {
 			try_files $uri $uri/ =404;
 			include /etc/nginx/fastcgi_params;
-			fastcgi_pass wordpress:9000;
+			fastcgi_pass wordpress:${WORDPRESS_PORT};
 			fastcgi_index index.php;
 			fastcgi_split_path_info ^(.+\.php)(/.+)$; 
 			
