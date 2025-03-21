@@ -1,15 +1,12 @@
 ARG BASE_VERSION
-#==alpine:3.20.6
-# Use the official Alpine base image
-FROM alpine:3.20.6
-#${BASE_VERSION}
+
+FROM $BASE_VERSION
 
 # Define build arguments
-#ARG CRT_PATH
-#ARG KEY_PATH
+ARG CRT_PATH
+ARG KEY_PATH
 ARG SECURE_PORT
-#ARG CRT
-#ARG KEY
+
 # Set environment variables test this to see if redunant
 # ENV CRT_PATH=${CRT_PATH}
 # ENV KEY_PATH=${KEY_PATH}
@@ -39,12 +36,12 @@ RUN mkdir -p /run/nginx /etc/nginx/ssl && \
 	chmod -R 755 /etc/ssl
 
 RUN  openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-    -keyout  /etc/nginx/ssl/selfsigned.key\
-    -out /etc/nginx/ssl/selfsigned.crt \
+    -keyout $KEY_PATH \
+    -out  $CRT_PATH \
     -subj "/C=FI/ST=Helsinki/L=Helsinki/O=42/OU=Hive/CN=${DOMAIN_NAME}"
 
-RUN chmod 600 /etc/nginx/ssl/selfsigned.crt
-RUN chmod 600 /etc/nginx/ssl/selfsigned.key
+RUN chmod 600 $CRT_PATH
+RUN chmod 600 $KEY_PATH
 # Copy custom Nginx configuration template file
 COPY conf/nginx.conf.template /etc/nginx/nginx.conf
 RUN chmod +x /etc/nginx/nginx.conf

@@ -12,11 +12,9 @@ services:
       dockerfile: nginx-Dockerfile
       args:
         BASE_VERSION: ${BASE_VERSION}
-        #CRT_PATH: ${CRT_PATH}
-        #KEY_PATH: ${KEY_PATH}
-        #SECURE_PORT: ${SECURE_PORT}
-        #CRT: ${CRT}
-        #KEY: ${KEY}
+        CRT_PATH: ${CRT_PATH}
+        KEY_PATH: ${KEY_PATH}
+        SECURE_PORT: ${SECURE_PORT}
     entrypoint: ["/entrypoint.sh"]
     ports:
       - "${SECURE_PORT}:${SECURE_PORT}"
