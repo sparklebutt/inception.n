@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" version="26.1.0">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" version="26.1.1">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2206" dy="3243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="3634" dy="3460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -28,20 +28,6 @@
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-84" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d79b00;gradientColor=#FFF2CC;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-250" y="-370" width="1440" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-65" value="2.5 network ERR" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f8cecc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;strokeColor=#b85450;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1020" y="-1520" width="655" height="261" as="geometry">
-            <mxRectangle x="1070" y="-1400" width="110" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-69" value="" style="shape=image;html=1;verticalLabelPosition=bottom;verticalAlign=top;imageAspect=1;aspect=fixed;image=img/clipart/Gear_128x128.png" parent="VuhiG2OMYxqmFF7oU0-H-65" vertex="1">
-          <mxGeometry y="26" width="655" height="61" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-66" value="After trying to apk docker, package couldnt be found even after updating packages.&lt;div&gt;i attempted to manually put in a main and community repository assuming they where simply missing.&lt;/div&gt;&lt;div&gt;Trying to update packages a fetch was attempted followed by an error (try again later and 4 unavailable).&lt;/div&gt;&lt;div&gt;Ping to google with error, online advice suggested to configure DNS, resolv.conf was empty so i added googles public DNS, no positive results yielded.&lt;/div&gt;&lt;div&gt;Manual networking configuration was required, since there was no interfaces file for network, ip link to check for interface, created a interfaces file, added DHCP (dynamic host config protocol). /ect/init.d/networking restart (restarting networking script inside init.d).&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-65" vertex="1">
-          <mxGeometry y="87" width="655" height="144" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-55" value="TO NOTE: setup-interfaces command exists, this was much easier no manual settings required but is available" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-65" vertex="1">
-          <mxGeometry y="231" width="655" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-0" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#CCFF99;dashed=1;gradientColor=#CCFF99;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-250" y="-890" width="930" height="450" as="geometry" />
         </mxCell>
@@ -49,7 +35,7 @@
           <mxGeometry x="320" y="-884" width="300" height="300" as="geometry" />
         </mxCell>
         <mxCell id="QDZcUWIWedcfiBCgo4B5-57" value="This runs the docker-compose" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-55" y="-1210" width="120" height="180" as="geometry" />
+          <mxGeometry x="-55" y="-1206" width="120" height="180" as="geometry" />
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="NGINX/" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="740" y="-330" width="120" height="40" as="geometry" />
@@ -272,64 +258,8 @@
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-5" value="nginx.conf.template" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="780" y="-110" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-6" value="vm installs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="129" y="-1606" width="750" height="576" as="geometry">
-            <mxRectangle x="420" y="-1270" width="100" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-50" value="1. When ur first initial loginhost is root, we do not need to use sudo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="30" width="750" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-7" value="2. sudo apk update (updates the packages list , does not update system)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="56" width="750" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-51" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;2.5 Had to do manual network config, then run sudo apk update again" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="86" width="750" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-8" value="3. sudo apk add docker" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="112" width="750" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-9" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;3.5 sudo rc-update add docker boot (if we want to have docker up and running our services at boot, can be done later)&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;.manually service docker start/stop/restart&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="142" width="750" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-12" value="4. sudo apk add pyhton3 (for docker compose)&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="172" width="750" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-13" value="5. sudo apk add py3-pip (for docker compose)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="198" width="750" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-25" value="sudo apk update" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="224" width="750" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-71" value="6. set up a virtual environment and install docker-compose into it (so the docker compose can run on nested virtulaization(prevents potential package conflicts (larger ovehead &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;is a negative side effect)))" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="250" width="750" height="36" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-79" value="stop here for a moment , we now create the Makefile, yaml file, dockerfiles for smoother proggression. activation of virtual enviornment will be required when starting to run docker.compose commands(Makefile))&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1;textShadow=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="286" width="750" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-53" value="apk add openssh so we can use scp, (secure copy)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="316" width="750" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-54" value="service sshd start , then , rc-update add sshd (ssh starts on boot)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="346" width="750" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-57" value="net-tools required to check ifconfig, here we find the ip address and mask, do this for both local and vm machine and check they both can ping eachother using the ip addr." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="376" width="750" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-59" value="passwd for you root, vi /etc/ssh/sshd_config to allow rootlogin and uncomment port 22, service sshd restart" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="436" width="750" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-63" value="here" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="456" width="750" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-60" value="&lt;div&gt;if you need to change the oldhost key entry&amp;nbsp; for vm&lt;/div&gt;ssh-keygen -R vm-ip&lt;div&gt;then ssh root@vm-ip and continue&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="486" width="750" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-67" value="scp -rP 2222 /home/user/testing/inception root@localhost:~/" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-6" vertex="1">
-          <mxGeometry y="546" width="750" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-26" value="alpine is a better choice because its containers are smaller, this allows for faster builds and transfer times.&lt;div&gt;its more lightweight and simple.&lt;/div&gt;" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="-190" y="-1480" width="100" height="190" as="geometry" />
+          <mxGeometry x="-177.5" y="-1211" width="100" height="190" as="geometry" />
         </mxCell>
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-27" value="nginx.crt" style="ellipse;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1121" y="-130" width="120" height="80" as="geometry" />
@@ -361,9 +291,9 @@
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-40" value="running docker-compose commands may require root to run, eg, nginx&lt;div&gt;ports bellow 1024, creating ssh keys and crts aswell as installing some depencies.&amp;nbsp;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="250" y="680" width="410" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-41" value="setting up vm (virtual box)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" collapsed="1">
-          <mxGeometry x="70" y="-1920" width="180" height="30" as="geometry">
-            <mxRectangle x="70" y="-1920" width="560" height="280" as="alternateBounds" />
+        <mxCell id="VuhiG2OMYxqmFF7oU0-H-41" value="setting up vm (virtual box)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="885" y="-2180" width="560" height="280" as="geometry">
+            <mxRectangle x="70" y="-1920" width="180" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-42" value="VB boasts good performance , is open source and is a commonly used tool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
@@ -390,60 +320,11 @@
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-49" value="do not tick pre-allocate Full size, this way we have a dynamically allocated virtual hard disk" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
           <mxGeometry y="224" width="560" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-0" value="we do want a virtual hard disk&amp;nbsp; (allows for persitence across restarts)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="VuhiG2OMYxqmFF7oU0-H-41">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-0" value="we do want a virtual hard disk&amp;nbsp; (allows for persitence across restarts)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-41" vertex="1">
           <mxGeometry y="250" width="560" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-70" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VuhiG2OMYxqmFF7oU0-H-51" target="VuhiG2OMYxqmFF7oU0-H-65" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="710" y="-1230" as="sourcePoint" />
-            <mxPoint x="760" y="-1280" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-11" value="sudo service docker start" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-159.99999999999997" y="-906" width="750" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-73" value="6. virtaulenv + compose" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#f5f5f5;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;strokeColor=#666666;fontColor=#333333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="1050" y="-1240" width="480" height="366" as="geometry">
-            <mxRectangle x="1050" y="-1240" width="170" height="23" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-38" value="&lt;div&gt;create a directory for the virtual environment&lt;/div&gt;mkdir -p ~/venvs then cd to it" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="26" width="480" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-34" value="create virtual environment&lt;div&gt;.python3 -m venv docker-compose-env&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="66" width="480" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-35" value="activate the virtual environment&lt;div&gt;. source docker-compose-env/bin/activate&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="96" width="480" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-39" value="check dates are correct and adjust to date now" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="126" width="480" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-46" value="apk add curl&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="156" width="480" height="26" as="geometry" />
-        </mxCell>
-        <UserObject label="curl -L &quot;https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose" link="curl -L &quot;https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose" id="Z3fMapQdSAwZX1owhjYI-47">
-          <mxCell style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-            <mxGeometry y="182" width="480" height="40" as="geometry" />
-          </mxCell>
-        </UserObject>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-36" value="install compose&lt;div&gt;. pip install docker-compose&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="222" width="480" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-76" value="docker-compose --version (to verify)&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="262" width="480" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="Z3fMapQdSAwZX1owhjYI-49" value="chmod +x /usr/local/bin/docker-compose" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="288" width="480" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-77" value="deactivate, when we start to use the docker-compose * we will need to activate it first, once we no longer need docker-compose commands we can deactivate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VuhiG2OMYxqmFF7oU0-H-73" vertex="1">
-          <mxGeometry y="318" width="480" height="48" as="geometry" />
-        </mxCell>
-        <mxCell id="VuhiG2OMYxqmFF7oU0-H-78" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="VuhiG2OMYxqmFF7oU0-H-71" target="VuhiG2OMYxqmFF7oU0-H-73" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="940" y="-1210" as="sourcePoint" />
-            <mxPoint x="990" y="-1260" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="VuhiG2OMYxqmFF7oU0-H-85" value="BONUSES /" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="900" y="-360" width="120" height="60" as="geometry" />
@@ -590,7 +471,7 @@
           <mxGeometry x="970" y="-870" width="750" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Z3fMapQdSAwZX1owhjYI-62" value="ip addr show&#xa;configure port forwarding through virtual boxes own settings&#xa;network&gt;advanced&gt;portfowarding&#xa;add new rule , ssh, tcp, blank,222, vm-ip,port 22&#xa;restart openssh, servcie sshd restart, then status" style="swimlane;startSize=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="970" y="-1862" width="200" height="200" as="geometry" />
+          <mxGeometry x="1570" y="-1940" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="Z3fMapQdSAwZX1owhjYI-64" value="docker-compose config to check yaml and .env file together" style="shape=delay;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="900" y="500" width="490" height="40" as="geometry" />
@@ -610,47 +491,154 @@
         <mxCell id="Z3fMapQdSAwZX1owhjYI-69" value="docker test thinga&lt;div&gt;1. check network up, docker network ls, create one:&amp;nbsp;&amp;nbsp;docker network create custom-network&lt;/div&gt;&lt;div&gt;2. how to step inside continaier&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;div&gt;docker exec -it mariadb_container /bin/sh&lt;/div&gt;&lt;/div&gt;&lt;div&gt;3. syntax can be checked eg, nginx -t&lt;/div&gt;" style="shape=loopLimit;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-67.5" y="470" width="325" height="385" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-1" value="setup-alpine" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-1" value="setup-alpine" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="315" y="-2010" width="540" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-2" value="keyboard layout i chose none" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-2" value="keyboard layout i chose none" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="320" y="-1980" width="490" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-3" value="hostname: choose a different one to local machine to avoid confusion (can be changed later)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-3" value="hostname: choose a different one to local machine to avoid confusion (can be changed later)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="330" y="-1950" width="510" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-4" value="interface: eth0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-4" value="interface: eth0" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="320" y="-1920" width="450" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-5" value="interface: dhcp for automatic network configuration" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-5" value="interface: dhcp for automatic network configuration" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="311.5" y="-1900" width="437" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-6" value="network config: do not need to manage manually here, can be changed later. should be automatic dhcp" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-6" value="network config: do not need to manage manually here, can be changed later. should be automatic dhcp" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="320" y="-1870" width="440" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-7" value="timezone self explanatory&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-7" value="timezone self explanatory&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="290" y="-1820" width="580" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-8" value="proxy: none for now (may need adjustment later, this fr the vm not nginx persay)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-8" value="proxy: none for now (may need adjustment later, this fr the vm not nginx persay)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="220" y="-1800" width="670" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-9" value="ntpd client , chrony (im hoping for better flexability, openntpd was not so effective)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-9" value="ntpd client , chrony (im hoping for better flexability, openntpd was not so effective)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="237.5" y="-1770" width="635" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-10" value="enable community repo and negate user setup&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-10" value="enable community repo and negate user setup&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="205" y="-1740" width="575" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-11" value="choose openssh for vaster options and allow root login for ssh, we will add shh later utalizing file sharing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-11" value="choose openssh for vaster options and allow root login for ssh, we will add shh later utalizing file sharing" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="192.5" y="-1710" width="695" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-12" value="go to vm settings, storage add hardisk then general , advanced and allow file sharing for copy paste option" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-12" value="go to vm settings, storage add hardisk then general , advanced and allow file sharing for copy paste option" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-133" y="-2120" width="400" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-13" value="go to shared folders and apply a folder path (advice to call it the same on alternative machines) , apply a mount folder, this does not need to exits yet in the vm, after setup you can create it and mount&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-13" value="go to shared folders and apply a folder path (advice to call it the same on alternative machines) , apply a mount folder, this does not need to exits yet in the vm, after setup you can create it and mount&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-130" y="-2060" width="450" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-14" value="choose sda as disk then choose sys" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="ZHqyOTC_AMdvRTDKiQdO-14" value="choose sda as disk then choose sys" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="195" y="-1692" width="665" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="QDZcUWIWedcfiBCgo4B5-56" target="QDZcUWIWedcfiBCgo4B5-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-2" value="vm installs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="220" y="-1650" width="750" height="412" as="geometry">
+            <mxRectangle x="420" y="-1270" width="100" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-3" value="1. When ur first initial loginhost is root, we do not need to use sudo" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="30" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-4" value="run alpine-setup --&amp;gt; will add these steps later, mostly self explanatory" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="56" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-5" value="2. sudo apk update (updates the packages list , does not update system)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="86" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-20" value="apk add vim if we want colours and potential syntax error notices" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="116" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-13" value="apk add openssh so we can use scp, (secure copy)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="146" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-21" value="set up ssh --&amp;gt;&amp;gt; will add these steps later.&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="176" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-10" value="sudo apk update" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="206" width="750" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-38" value="apk add make" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="232" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-6" value="3. sudo apk add docker and add docker-compose" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="262" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-12" value="stop here for a moment , we now create the Makefile, yaml file, dockerfiles for smoother proggression. activation of virtual enviornment will be required when starting to run docker.compose commands(Makefile))&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontStyle=1;textShadow=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="292" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-15" value="net-tools required to check ifconfig, here we find the ip address and mask, do this for both local and vm machine and check they both can ping eachother using the ip addr." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="322" width="750" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-39" value="service start docker (to get the ball rolling)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-2" vertex="1">
+          <mxGeometry y="382" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-22" value="ssh set up" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1100" y="-1680" width="400" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-23" value="vim /etc/ssh/sshd_config" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-22" vertex="1">
+          <mxGeometry y="30" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-24" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PermitRootLogin yes&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;PasswordAuthengtication yes&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Port 22&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-22" vertex="1">
+          <mxGeometry y="60" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-25" value="rc_service sshd restart" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-22" vertex="1">
+          <mxGeometry y="120" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-26" value="in physical machines terminal ssh user@vm-ip (inside vm type ip addr)&lt;div&gt;you know have access to copy paste&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-22" vertex="1">
+          <mxGeometry y="150" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-27" value="set up git" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1110" y="-1478" width="390" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-28" value="apk update &amp;amp;&amp;amp; apk add git" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="30" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-29" value="apk add git" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="60" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-30" value="&lt;div&gt;git config --global user.name &quot;Your Name&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="90" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-32" value="&lt;div&gt;git config --global user.email &quot;youremail@example.com&quot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="120" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-33" value="&lt;div&gt;git config --list (to see you have done correct input)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="150" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-34" value="&lt;div&gt;ssh-keygen -t rsa -b 4096 -C &quot;vm@example.com&quot;&lt;/div&gt;&lt;div&gt;(to gen vms own key)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="180" width="390" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-35" value="&lt;div&gt;cat ~/.ssh/id_rsa.pub&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;paste into git ssh keys&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="230" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-36" value="&lt;div&gt;ssh -T git@github.com&lt;/div&gt;&lt;div&gt;(test connection )&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="260" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-37" value="rinse and repeaae for usernme , if this was done for root&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="uMcUcsL96oLUDKpdZnBT-27" vertex="1">
+          <mxGeometry y="290" width="390" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-31" value="physical machine :: file transfer: scp path/to/file.txt user@vm_ip:~/wherever" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="225" y="-1211" width="710" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-14" value="service sshd start , then , rc-update add sshd (ssh starts on boot)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-730" y="-2050" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-19" value="scp -rP 2222 /home/user/testing/inception root@localhost:~/" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-940" y="-1199" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-16" value="passwd for you root, vi /etc/ssh/sshd_config to allow rootlogin and uncomment port 22, service sshd restart" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-570" y="-1940" width="750" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-17" value="here" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-920" y="-1250" width="750" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uMcUcsL96oLUDKpdZnBT-18" value="&lt;div&gt;if you need to change the oldhost key entry&amp;nbsp; for vm&lt;/div&gt;ssh-keygen -R vm-ip&lt;div&gt;then ssh root@vm-ip and continue&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="-960" y="-1320" width="750" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
