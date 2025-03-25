@@ -1,9 +1,7 @@
 
 ARG BASE_VERSION
-# Use the official Alpine base image
 FROM $BASE_VERSION 
-#alpine:3.20.6
-#${BASE_VERSION}
+
 ARG MARIADB_PORT
 
 RUN apk update && apk add --no-cache \

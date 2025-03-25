@@ -22,6 +22,10 @@ RUN apk update && apk add --no-cache \
     php-phar \
     mariadb-client
 
+# Download WP CLI, dockerfile allows for strong version control
+RUN wget -q https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O /usr/local/bin/wp
+chmod +x /usr/local/bin/wp
+
 # Copy PHP-FPM configuration template
 COPY php-fpm.conf.template /etc/php83/php-fpm.d/www.conf.template
 
@@ -31,18 +35,23 @@ RUN echo "php_admin_value[max_execution_time] = 300"
 RUN echo "php_admin_value[max_input_time] = 300"
 RUN echo "cgi.force_redirect = 0" >> /etc/php83/php.ini
 
+
+#RUN chown -R nginx:nginx /var/www/html
+
 # Create necessary directories
 RUN mkdir -p /run/php /var/lib/nginx
-
+RUN mkdir -p /var/www/html
 # Create nginx user
 WORKDIR /var/www/html
+RUN chown -R 775 /var/www/html
+
 RUN addgroup -S nginx && adduser -S nginx -G nginx
 RUN chown -R nginx:nginx /var/lib/nginx /var/www/html
 
 # Install WP-CLI
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
-    chmod +x wp-cli.phar && \
-    mv wp-cli.phar /usr/local/bin/wp
+#RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+#    chmod +x wp-cli.phar && \
+#    mv wp-cli.phar /usr/local/bin/wp
 
 # Copy entrypoint script
 COPY tools/entrypoint.sh /entrypoint.sh

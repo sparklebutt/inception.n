@@ -12,29 +12,17 @@ until mysql -h"${WORDPRESS_DB_HOST}" -u"${WORDPRESS_DB_USER}" -p"${WORDPRESS_DB_
   sleep 10
 done
 
-echo "Database connection successful."
+#echo "Database connection successful."
 
-echo "Listing databases:"
-mysql -h"${WORDPRESS_DB_HOST}" -u"${WORDPRESS_DB_USER}" -p"${WORDPRESS_DB_PASSWORD}" "${WORDPRESS_DB_NAME}" <<EOF
-SHOW DATABASES;
-EOF
-
-# Download WP CLI
-wget -q https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -O /usr/local/bin/wp
-# Make it executable
-chmod +x /usr/local/bin/wp
-
-# Ensure the web root directory exists
-mkdir -p /var/www/html
-chown -R 775 /var/www/html
+#echo "Listing databases:"
+#mysql -h"${WORDPRESS_DB_HOST}" -u"${WORDPRESS_DB_USER}" -p"${WORDPRESS_DB_PASSWORD}" "${WORDPRESS_DB_NAME}" <<EOF
+#SHOW DATABASES;
+#EOF
 
 echo "ATTEMPTING TO INSTALL WORDPRESS"
 # Install WordPress
 if ! wp core is-installed --path="/var/www/html"; then
   echo "WordPress is being installed"
-
-  # Clean up any existing WordPress files
-  # rm -rf /var/www/html/*
 
   if ! wp core download --path=/var/www/html; then
     echo "Error downloading WordPress"
@@ -70,8 +58,4 @@ wp option update home "https://$DOMAIN_NAME" --allow-root
 # Set Permalink Structure
 #wp rewrite structure '/%postname%/' --allow-root --path=/var/www/html
 #wp rewrite flush --hard --allow-root --path=/var/www/html
-
-chown -R nginx:nginx /var/www/html
-chmod -R 755 /var/www/html
-
 exec php-fpm83 -F
