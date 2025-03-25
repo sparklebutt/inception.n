@@ -13,7 +13,8 @@ ARG SECURE_PORT
 
 # Install Nginx and OpenSSL no cache ensurfes latest packages
 # envsubst (via gettext) so i can use .env vars in conf files
-RUN apk update && apk add --no-cache nginx openssl gettext 
+RUN apk update && apk add --no-cache nginx openssl
+# gettext 
 RUN apk add --no-cache fcgi
 RUN apk add --no-cache curl
 # Add non-root user and set permissions if the user does not already exist
@@ -46,7 +47,7 @@ RUN chmod 600 $KEY_PATH
 COPY conf/nginx.conf.template /etc/nginx/nginx.conf
 RUN chmod +x /etc/nginx/nginx.conf
 
-RUN echo 'fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;' >> /etc/nginx/fastcgi_params
+# RUN echo 'fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;' >> /etc/nginx/fastcgi_params
 # do i need for conf also?
 # Expose port 443 for HTTPS
 EXPOSE ${SECURE_PORT}
