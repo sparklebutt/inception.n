@@ -5,7 +5,7 @@ set -e
 envsubst < /etc/php83/php-fpm.d/www.conf.template > /etc/php83/php-fpm.d/www.conf
 
 echo "Testing database connection..."
-echo "WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}"
+#echo "WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}"
 
 until mysql -h"${WORDPRESS_DB_HOST}" -u"${WORDPRESS_DB_USER}" -p"${WORDPRESS_DB_PASSWORD}" -e "USE ${WORDPRESS_DB_NAME};"; do
   echo "waiting for database connection .....!"
@@ -55,7 +55,4 @@ fi
 wp option update siteurl "https://$DOMAIN_NAME" --allow-root
 wp option update home "https://$DOMAIN_NAME" --allow-root
 
-# Set Permalink Structure
-#wp rewrite structure '/%postname%/' --allow-root --path=/var/www/html
-#wp rewrite flush --hard --allow-root --path=/var/www/html
 exec php-fpm83 -F
