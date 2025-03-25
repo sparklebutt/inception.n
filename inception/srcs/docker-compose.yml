@@ -83,7 +83,7 @@ services:
     depends_on:
       - mariadb
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:9000/wp-admin/install.php || exit 1"]
+      test: ["CMD-SHELL", "curl -f http://nginx/wp-admin/install.php || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3

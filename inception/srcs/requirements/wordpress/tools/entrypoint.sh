@@ -28,13 +28,6 @@ chmod +x /usr/local/bin/wp
 mkdir -p /var/www/html
 chown -R 775 /var/www/html
 
-#echo "ATTEMPTING TO DOWNLOAD WP-CONFIG"
-# Create wp-config.php
-#if ! wp config create --dbname="${MYSQL_DATABASE}" --dbuser="${MYSQL_USER}" --dbpass="${MYSQL_PASSWORD}" --dbhost="${DB_HOST}" --path=/var/www/html --allow-root --force; then
-#  echo "Error creating wp-config.php"
-#  exit 1
-#fi
-
 echo "ATTEMPTING TO INSTALL WORDPRESS"
 # Install WordPress
 if ! wp core is-installed --path="/var/www/html"; then
@@ -75,8 +68,8 @@ wp option update siteurl "https://$DOMAIN_NAME" --allow-root
 wp option update home "https://$DOMAIN_NAME" --allow-root
 
 # Set Permalink Structure
-wp rewrite structure '/%postname%/' --allow-root --path=/var/www/html
-wp rewrite flush --hard --allow-root --path=/var/www/html
+#wp rewrite structure '/%postname%/' --allow-root --path=/var/www/html
+#wp rewrite flush --hard --allow-root --path=/var/www/html
 
 chown -R nginx:nginx /var/www/html
 chmod -R 755 /var/www/html

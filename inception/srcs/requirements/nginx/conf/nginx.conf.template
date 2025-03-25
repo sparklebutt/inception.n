@@ -70,9 +70,9 @@ http {
 			# Log FastCGI parameters
     			access_log /var/log/nginx/fastcgi_params.log custom;
 
-			add_header X-Debug-SCRIPT_FILENAME $document_root$fastcgi_script_name;
-			add_header X-Debug-DOCUMENT_ROOT $document_root;
-			add_header X-Debug-Fastcgi-Script-Name $fastcgi_script_name;
+			#add_header X-Debug-SCRIPT_FILENAME $document_root$fastcgi_script_name;
+			#add_header X-Debug-DOCUMENT_ROOT $document_root;
+			#add_header X-Debug-Fastcgi-Script-Name $fastcgi_script_name;
 
 			fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 			fastcgi_param PATH_INFO $fastcgi_path_info;

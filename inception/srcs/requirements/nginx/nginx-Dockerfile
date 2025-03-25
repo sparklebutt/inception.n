@@ -7,16 +7,13 @@ ARG CRT_PATH
 ARG KEY_PATH
 ARG SECURE_PORT
 
-# Set environment variables test this to see if redunant
-# ENV CRT_PATH=${CRT_PATH}
-# ENV KEY_PATH=${KEY_PATH}
-
 # Install Nginx and OpenSSL no cache ensurfes latest packages
 # envsubst (via gettext) so i can use .env vars in conf files
 RUN apk update && apk add --no-cache nginx openssl
-# gettext 
+
 RUN apk add --no-cache fcgi
 RUN apk add --no-cache curl
+
 # Add non-root user and set permissions if the user does not already exist
 RUN id -u nginx &>/dev/null || adduser -D -g 'www' nginx && chown -R nginx:nginx /var/lib/nginx
 
@@ -47,11 +44,7 @@ RUN chmod 600 $KEY_PATH
 COPY conf/nginx.conf.template /etc/nginx/nginx.conf
 RUN chmod +x /etc/nginx/nginx.conf
 
-# RUN echo 'fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;' >> /etc/nginx/fastcgi_params
-# do i need for conf also?
-# Expose port 443 for HTTPS
 EXPOSE ${SECURE_PORT}
 
-#CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
 # Use entrypoint script to run Nginx
 ENTRYPOINT ["/entrypoint.sh"]
