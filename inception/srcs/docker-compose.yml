@@ -1,7 +1,4 @@
-# version: '3.8' oboslete for debian 
-# is the test .sh executable and fix
 services:
-# NGINX
   nginx:
     env_file:
       - ./.env
@@ -22,22 +19,10 @@ services:
       - DOMAIN_NAME=${DOMAIN_NAME}
       - CRT_PATH=${CRT_PATH}
       - KEY_PATH=${KEY_PATH}
-      #- INSECURE_PORT=${INSECURE_PORT}
       - SECURE_PORT=${SECURE_PORT}
       - WORDPRESS_PORT=${WORDPRESS_PORT}
-
-      #- CRT=${CRT}
-      #- KEY=${KEY}
-
     volumes:
-      #- ${VOLUME_PATH_GENERIC}nginx-selfsigned.crt:${CRT_PATH}
-      #- ${VOLUME_PATH_GENERIC}nginx-selfsigned.key:${KEY_PATH}
-#      - .${CRT_PATH}:${CRT_PATH}
-#      - .${KEY_PATH}:${KEY_PATH}
       - ${WORDPRESS_VOLUME_PATH}:/var/www/html
-      #- ${NGINX_VOLUME_PATH}nginx-logs:/var/log/nginx 
-      #- /root/incept/inception/srcs/nginx_error.log:/var/log/nginx/error.log
-      #- /root/incept/inception/srcs/nginx_access.log:/var/log/nginx/access.log
     networks:
       - inceptionnet
     restart: unless-stopped
@@ -49,8 +34,6 @@ services:
       timeout: 10s
       retries: 3
 
-
-# WORDPRESS
   wordpress:
     env_file:
       - ./.env
@@ -63,7 +46,6 @@ services:
         BASE_VERSION: ${BASE_VERSION}
         WORDPRESS_PORT: ${WORDPRESS_PORT}
     entrypoint: ["/entrypoint.sh"]
-    #ports:
     environment:
       - WORDPRESS_DB_HOST=${DB_HOST}
       - WORDPRESS_DB_USER=${MYSQL_USER}
@@ -87,7 +69,6 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-# MARIADB
   mariadb:
     env_file:
       - ./.env

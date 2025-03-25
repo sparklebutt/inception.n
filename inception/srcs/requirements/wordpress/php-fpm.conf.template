@@ -11,7 +11,6 @@ listen = 0.0.0.0:${WORDPRESS_PORT}
 listen.owner = nginx
 listen.group = nginx
 listen.mode = 0660
-; listen.allowed_clients = 127.0.0.1
 
 pm = dynamic
 pm.max_children = 5
@@ -21,7 +20,6 @@ pm.max_spare_servers = 3
 
 ; Set the URI to view the FPM status page
 pm.status_path = /status
-
 
 ; increase php memeory limit 
 php_admin_value[memory_limit] = 256M
@@ -34,8 +32,8 @@ php_admin_value[error_log] = /var/log/php-fpm.www.log
 php_admin_flag[log_errors] = on
 
 ; Environment variables
-env[HOSTNAME] = $HOSTNAME
-env[PATH] = /usr/local/bin:/usr/bin:/bin
-env[TMP] = /tmp
-env[TMPDIR] = /tmp
-env[TEMP] = /tmp
+; env[HOSTNAME] = $HOSTNAME
+; env[PATH] = /usr/local/bin:/usr/bin:/bin
+; env[TMP] = /tmp
+; env[TMPDIR] = /tmp
+; env[TEMP] = /tmp

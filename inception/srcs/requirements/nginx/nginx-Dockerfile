@@ -17,22 +17,15 @@ RUN apk update && apk add --no-cache \
 	touch /etc/nginx/nginx.conf.template && \
 	chmod -R 755 /etc/ssl
 
-# Add non-root user and set permissions if the user does not already exist
-#RUN 
-
-# Copy entrypoint script to dynamically create the config
-COPY tools/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-# Create directories for default SSL certificates 
-#RUN 
-
 RUN  openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -keyout $KEY_PATH \
     -out  $CRT_PATH \
     -subj "/C=FI/ST=Helsinki/L=Helsinki/O=42/OU=Hive/CN=${DOMAIN_NAME}" && \
 	chmod 600 $CRT_PATH $KEY_PATH
 
+# Copy entrypoint script to dynamically create the config
+COPY tools/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 # Copy custom Nginx configuration template file
 COPY conf/nginx.conf.template /etc/nginx/nginx.conf
 RUN chmod +x /etc/nginx/nginx.conf
