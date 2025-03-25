@@ -25,7 +25,7 @@ services:
       - ${WORDPRESS_VOLUME_PATH}:/var/www/html
     networks:
       - inceptionnet
-    restart: unless-stopped
+    restart: always
     depends_on:
       - wordpress
     healthcheck:
@@ -61,7 +61,7 @@ services:
       - ${WORDPRESS_VOLUME_PATH}:/var/www/html
     networks:
       - inceptionnet
-    restart: unless-stopped
+    restart: always
     depends_on:
       - mariadb
     healthcheck:
@@ -95,7 +95,7 @@ services:
       - ${DB_VOLUME_PATH}:/var/lib/mysql
     networks:
       - inceptionnet
-    restart: unless-stopped
+    restart: always
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-u", "root", "--password=${MYSQL_ROOT_PASSWORD}"]
       interval: 30s
