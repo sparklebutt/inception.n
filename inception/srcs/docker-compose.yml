@@ -101,7 +101,10 @@ services:
         WORDPRESS_PORT: ${WORDPRESS_PORT}
         MARIADB_PORT: ${MARIADB_PORT}
     entrypoint: ["/entrypoint.sh"]
-    environment: 
+    environment:
+      - DB_SYS_USER=${DB_SYS_USER}
+      - BIND_ADDR=${BIND_ADDR}
+      - DB_PIDFILE=${DB_PIDFILE}
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
