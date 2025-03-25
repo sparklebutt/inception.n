@@ -10,27 +10,28 @@ RUN apk update && apk add --no-cache \
 	nginx \
 	openssl \
 	fcgi \
-	curl
+	curl \
+	&& id -u nginx &>/dev/null || adduser -D -g 'www' nginx && \
+	chown -R nginx:nginx /var/lib/nginx && \
+	mkdir -p /run/nginx /etc/nginx/ssl && \
+	touch /etc/nginx/nginx.conf.template && \
+	chmod -R 755 /etc/ssl
 
 # Add non-root user and set permissions if the user does not already exist
-RUN id -u nginx &>/dev/null || adduser -D -g 'www' nginx && chown -R nginx:nginx /var/lib/nginx
+#RUN 
 
 # Copy entrypoint script to dynamically create the config
 COPY tools/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 # Create directories for default SSL certificates 
-RUN mkdir -p /run/nginx /etc/nginx/ssl && \
-	touch /etc/nginx/nginx.conf.template && \
-	chmod -R 755 /etc/ssl
+#RUN 
 
 RUN  openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
     -keyout $KEY_PATH \
     -out  $CRT_PATH \
-    -subj "/C=FI/ST=Helsinki/L=Helsinki/O=42/OU=Hive/CN=${DOMAIN_NAME}"
-
-RUN chmod 600 $CRT_PATH
-RUN chmod 600 $KEY_PATH
+    -subj "/C=FI/ST=Helsinki/L=Helsinki/O=42/OU=Hive/CN=${DOMAIN_NAME}" && \
+	chmod 600 $CRT_PATH $KEY_PATH
 
 # Copy custom Nginx configuration template file
 COPY conf/nginx.conf.template /etc/nginx/nginx.conf
