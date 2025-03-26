@@ -19,6 +19,7 @@ done
 #SHOW DATABASES;
 #EOF
 
+chown -R nginx:nginx /var/lib/nginx /var/www/html
 echo "ATTEMPTING TO INSTALL WORDPRESS"
 # Install WordPress
 if ! wp core is-installed --path="/var/www/html"; then

@@ -15,7 +15,9 @@ fi
 chown -R mysql:mysql /var/lib/mysql /run/mysqld /var/log/mysql
 
 #temp start of mariadb for init of database and users
-mysqld_safe &
+mysqld_safe & 
+
+#--skip-networking &
 pid="$!"
 # Wait for MariaDB to be ready
 until mysqladmin ping --silent; do
@@ -31,7 +33,7 @@ mysql -u root <<-EOSQL
   FLUSH PRIVILEGES;
 EOSQL
 
-#mysqladmin -u root shutdown
+mysqladmin -u root shutdown
 
-#exec mysqld_safe
-wait $pid
+exec mysqld_safe
+#wait $pid
