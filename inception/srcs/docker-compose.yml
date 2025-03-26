@@ -24,6 +24,7 @@ services:
     volumes:
       - ${WORDPRESS_VOLUME_PATH}:/var/www/html
     networks:
+      #- outout
       - inceptionnet
     restart: always
     depends_on:
@@ -105,6 +106,10 @@ volumes:
   wordpress-data:
   db-data:
 networks:
+  #outout:
+  #  name: outout
+  #  driver: bridge
   inceptionnet:
     driver: bridge
     name: inceptionnet
+  #  internal: true

@@ -26,7 +26,10 @@ http {
 	keepalive_timeout 65;
 	#include /etc/nginx/conf.d/*.conf;
 
-	   # Redirect HTTP to HTTPS
+	upstream wordpress {
+		server wordpress:9000;
+	}
+	# Redirect HTTP to HTTPS
     	server {
         listen 80;
 		listen [::]:80;
@@ -63,7 +66,7 @@ http {
 		location ~ \.php$ {
 			try_files $uri $uri/ =404;
 			include /etc/nginx/fastcgi_params;
-			fastcgi_pass wordpress:${WORDPRESS_PORT};
+			fastcgi_pass wordpress;
 			fastcgi_index index.php;
 			fastcgi_split_path_info ^(.+\.php)(/.+)$; 
 			
