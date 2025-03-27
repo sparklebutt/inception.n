@@ -18,6 +18,10 @@ nginx=nginx #nginx continaer name
 wordpress=wordpress #wordpress continaer name
 mariadb=mariadb #mariadb container name
 network_name="inceptionnet" # name of internal network defined in yaml file
+# label vars as dessired variables inside nginx.conf, these just check that the placeholders no longer exists after copy
+var1='${DOMAIN_NAME}'
+var2='${SECURE_PORT}'
+var3='${WORDPRESS_PORT}'
 #NETWORK=inceptionnet 
 SECURE_PORT=${SECURE_PORT:-443} #secure port for nginx
 WORDPRESS_PORT=${WORDPRESS_PORT:-9000} #wordpress port
@@ -97,7 +101,7 @@ echo "---------Testing internal docker network"
 
 # test ssl certificates
 
-output=$(curl -v https://$DOMAIN_NAME --insecure 2>&1)
+output=$(curl -v https://$DOMAIN_NAME --insecure 2>&1 | grep "SSL certificate")
 
 # Check if SSL certificate information is present
 if echo "$output" | grep -q "SSL certificate"; then
@@ -113,7 +117,8 @@ else
     	echo "SSL certificate not properly configured. Test failed."
 	else
     	echo "Unknown SSL issue. Test failed."
-    exit 1
+	fi
+	exit 1
 fi
 
 
@@ -246,7 +251,7 @@ else
 fi
 
 
-for var in $DOMAIN_NAME $SECURE_PORT $WORDPRESS_PORT; do
+for var in $var1 $var2 $var3; do
 {
 	if docker exec $nginx cat /etc/nginx/nginx.conf | grep "$var" ; then
 		echo "Test Failed: Environment variable $var was not substituted"
@@ -359,5 +364,3 @@ if [ $? -ne 0 ]; then
 	echo "Test Failed: WordPress directory permissions are incorrect"
 	exit 1
 fi
-
-# Test if SSL/TLS certificate is being served correctly
