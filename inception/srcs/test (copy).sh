@@ -38,7 +38,7 @@ if [ "$port" = "9000" ]; then
     echo "Testing PHP-FPM connection through Nginx on port $port..."
     while [ $count -lt $retries ]; do
         echo "Checking if $service is ready to handle PHP requests (attempt $((count + 1))/$retries)..."
-        if docker exec $nginx curl -k -s -o /dev/null -w "%{http_code}" https://localhost >/dev/null; then
+        if docker exec nginx curl -k -s -o /dev/null -w "%{http_code}" https://localhost >/dev/null; then
         #if [ $? -eq 0 ]; then
             echo "$service PHP-FPM is successfully responding on port $port through Nginx."
             return 0
@@ -65,13 +65,13 @@ echo "Error: $service did not become ready in time on port $port"
 return 1
 }
 # Wait for Nginx and WordPress to be ready
-wait_for_service $nginx 443
+wait_for_service nginx 443
 if [ $? -ne 0 ]; then
 	echo "Nginx did not become ready in time"
 	exit 1
 fi
 
-wait_for_service $wordpress 9000
+wait_for_service wordpress 9000
 if [ $? -ne 0 ]; then
 	echo "WordPress did not become ready in time"
 	exit 1
@@ -100,7 +100,7 @@ echo "---------Testing internal docker network"
 connected_containers=$(docker network inspect $network_name | grep '"Name":' | awk -F '"' '{print $4}')
 
 # Verify all expected containers are connected
-expected_containers="$nginx $wordpress $mariadb"
+expected_containers="nginx wordpress mariadb"
 for container in $expected_containers; do
     if echo "$connected_containers" | grep  -w $container ; then
         echo "Test Passed: $container is connected to the $network_name network."
@@ -119,7 +119,7 @@ fi
 
 
 # Define the container names
-containers="$wordpress $mariadb"
+containers="wordpress mariadb"
 entrypoint_risk=false
 
 # Function to get the container's IP
@@ -158,7 +158,7 @@ check_service_access() {
     for port in $ports; do
         echo "Testing port $port on $container..."
 
-        if [ "$container" == "$wordpress" ]; then
+        if [ "$container" == "wordpress" ]; then
             # Test HTTP for WordPress
             result=$(curl -s --head http://$ip:$port)
             if [ -z "$result" ]; then
@@ -167,7 +167,7 @@ check_service_access() {
                 echo "⚠️  HTTP response detected on port $port! Potential entrypoint risk for $container."
                 entrypoint_risk=true
             fi
-        elif [ "$container" == "$mariadb" ]; then
+        elif [ "$container" == "mariadb" ]; then
             # Test SQL for MariaDB (only check if port is 3306)
             if [ "$port" -eq 3306 ]; then
                 result=$(mysql -h $ip -P $port -u root -p 2>/dev/null)
@@ -220,11 +220,11 @@ fi
 
 echo "---------Testing server name configured--------"
 # Test if the Nginx configuration contains the server_name directive
-docker exec $nginx cat /etc/nginx/nginx.conf | grep 'server_name'
+docker exec nginx cat /etc/nginx/nginx.conf | grep 'server_name'
 if [ $? -ne 0 ]; then
 	echo "Test Failed: Nginx configuration is incorrect or not being used"
 	echo "Contents of /etc/nginx/nginx.conf:"
-	docker exec $nginx cat /etc/nginx/nginx.conf
+	docker exec nginx cat /etc/nginx/nginx.conf
 	exit 1
 else
 	echo "Test Passed: Nginx configuration contains the server_name directive"
@@ -233,10 +233,10 @@ fi
 
 for var in '$DOMAIN_NAME' '$SECURE_PORT' '$WORDPRESS_PORT'; do
 {
-	if docker exec $nginx cat /etc/nginx/nginx.conf | grep "$var" ; then
+	if docker exec nginx cat /etc/nginx/nginx.conf | grep "$var" ; then
 		echo "Test Failed: Environment variable $var was not substituted"
 		echo "Contents of /etc/nginx/nginx.conf:"
-		docker exec $nginx cat /etc/nginx/nginx.conf
+		docker exec nginx cat /etc/nginx/nginx.conf
 		exit 1
 	else
 		echo "Test Passed: Environment variable $var was substituted in nginx.conf"
@@ -244,7 +244,7 @@ for var in '$DOMAIN_NAME' '$SECURE_PORT' '$WORDPRESS_PORT'; do
 }
 done
 
-docker exec $nginx curl -k -s https://localhost:${SECURE_PORT}/wp-admin/setup-config.php >/dev/null 2>&1
+docker exec nginx curl -k -s https://localhost:${SECURE_PORT}/wp-admin/setup-config.php >/dev/null 2>&1
 if [ $? -eq 0 ]; then
 	echo "Test Passed: nginx and mariadb are communicating"
 else
@@ -254,7 +254,7 @@ fi
 
 
 echo "Testing NGINX for TLSv1.1 (this should be blocked)..."
-docker exec $nginx curl -k -v --tls-max 1.1 https://localhost >/dev/null 2>&1
+docker exec nginx curl -k -v --tls-max 1.1 https://localhost >/dev/null 2>&1
 if [ $? -eq 0 ]; then
     # If exit code is 0, the connection succeeded, which is a failure for this test
     echo "Test Failed: NGINX allowed TLSv1.1 (this is not expected)"
@@ -264,7 +264,7 @@ else
     echo "Test Passed: NGINX correctly blocked TLSv1.1"
 fi
 echo "Testing NGINX for TLSv1.4 (this should be blocked (version dosnt exist yet, if this establishes a connection something wild has happened))..."
-docker exec $nginx curl -k -v --tls-max 1.4 https://localhost >/dev/null 2>&1
+docker exec nginx curl -k -v --tls-max 1.4 https://localhost >/dev/null 2>&1
 if [ $? -eq 0 ]; then
     # If exit code is 0, the connection succeeded, which is a failure for this test
     echo "Test Failed: NGINX allowed TLSv1.4 (this is not expected)"
@@ -275,7 +275,7 @@ else
 fi
 
 echo "Testing NGINX for TLSv1.2 (this should NOT be blocked)..."
-docker exec $nginx curl -k -v --tls-max 1.2 https://localhost >/dev/null 2>&1
+docker exec nginx curl -k -v --tls-max 1.2 https://localhost >/dev/null 2>&1
 if [ $? -eq 0 ]; then
     # If exit code is 0, the connection succeeded, which is what we want 
     echo "Test Passed: NGINX allowed TLSv1.2 "
@@ -286,7 +286,7 @@ else
 fi
 
 echo "Testing NGINX for TLSv1.3 (this should NOT be blocked)..."
-docker exec $nginx curl -k -v --tls-max 1.3 https://localhost >/dev/null 2>&1
+docker exec nginx curl -k -v --tls-max 1.3 https://localhost >/dev/null 2>&1
 if [ $? -eq 0 ]; then
     # If exit code is 0, the connection succeeded, which is what we want
     echo "Test Passed: NGINX allowed TLSv1.3 "
@@ -300,15 +300,15 @@ echo "All nginx tests passed successfully."
 
 # Test if WordPress home page is up and running
 echo "Testing if WordPress homapage is up and running"
-docker exec $nginx curl -k -s https://localhost:${SECURE_PORT} | grep 'WordPress Site'
+docker exec nginx curl -k -s https://localhost:${SECURE_PORT} | grep 'WordPress Site'
 if [ $? -ne 0 ]; then
 	echo "Test Failed: WordPress home page not served correctly"
 	echo "Nginx logs:"
-	docker exec $nginx cat /var/log/nginx/error.log
-	docker exec $nginx cat /var/log/nginx/access.log
+	docker exec nginx cat /var/log/nginx/error.log
+	docker exec nginx cat /var/log/nginx/access.log
 	echo "WordPress logs:"
-	docker exec $wordpress cat /var/log/nginx/error.log
-	docker exec $wordpress cat /var/log/nginx/access.log
+	docker exec wordpress cat /var/log/nginx/error.log
+	docker exec wordpress cat /var/log/nginx/access.log
 	exit 1
 else
 	echo "Test Passed: WordPress home page served correctly"
@@ -316,7 +316,7 @@ fi
 
 # Test if WordPress login page is accessible
 echo "Testing WordPress login page is accesible"
-docker exec $nginx curl -k -s https://localhost:${SECURE_PORT}/wp-login.php | grep 'Log In'
+docker exec nginx curl -k -s https://localhost:${SECURE_PORT}/wp-login.php | grep 'Log In'
 if [ $? -ne 0 ]; then
 	echo "Test Failed: WordPress login page not accessible"
 	exit 1
@@ -325,28 +325,28 @@ else
 fi
 
 # Test database connection via WordPress
-docker exec $wordpress wp db check --path=/var/www/html
+docker exec wordpress wp db check --path=/var/www/html
 if [ $? -ne 0 ]; then
 	echo "Test Failed: WordPress cannot connect to the database"
 	exit 1
 fi
 
 # Test if PHP-FPM is running
-docker exec $wordpress ps aux | grep php-fpm | grep -v grep
+docker exec wordpress ps aux | grep php-fpm | grep -v grep
 if [ $? -ne 0 ]; then
 	echo "Test Failed: PHP-FPM is not running"
 	exit 1
 fi
 
 # Test if WordPress directory has correct permissions
-docker exec $wordpress ls -ld /var/www/html | grep 'nginx'
+docker exec wordpress ls -ld /var/www/html | grep 'nginx'
 if [ $? -ne 0 ]; then
 	echo "Test Failed: WordPress directory permissions are incorrect"
 	exit 1
 fi
 
 # Test if SSL/TLS certificate is being served correctly
-docker exec $nginx curl -k -s --head https://localhost:${SECURE_PORT} | grep '200 OK'
+docker exec nginx curl -k -s --head https://localhost:${SECURE_PORT} | grep '200 OK'
 if [ $? -ne 0 ]; then
 	echo "Test Failed: SSL/TLS certificate not served correctly"
 	exit 1
