@@ -2,6 +2,7 @@
 
 
 # isntalls required, curl and nmap
+
 # Change to the directory where the script is located
 cd "$(dirname "$0")"
 
@@ -13,7 +14,13 @@ else
 	exit 1
 fi
 
-
+NGINX=nginx #nginx continaer name
+WORDPRESS=wordpress #wordpress continaer name
+MARIADB=mariadb #mariadb container name
+NETWORK=inceptionnet # name of internal network defined in yaml file
+SECURE_PORT=${SECURE_PORT:-443} #secure port for nginx
+WORDPRESS_PORT=${WORDPRESS_PORT:-9000} #wordpress port
+DOMAIN_NAME=${DOMAIN_NAME:-localhost} # adjust this to domain name
 # Function to wait for a service to be healthy
 wait_for_service() {
 	local service=$1
