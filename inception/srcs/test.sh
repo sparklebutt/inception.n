@@ -22,6 +22,7 @@ network_name="inceptionnet" # name of internal network defined in yaml file
 SECURE_PORT=${SECURE_PORT:-443} #secure port for nginx
 WORDPRESS_PORT=${WORDPRESS_PORT:-9000} #wordpress port
 DOMAIN_NAME=${DOMAIN_NAME:-localhost} # adjust this to domain name
+
 # Function to wait for a service to be healthy
 wait_for_service() {
 	local service=$1
@@ -94,6 +95,26 @@ fi
 
 echo "---------Testing internal docker network"
 
+# test ssl certificates
+
+output=$(curl -v https://$DOMAIN_NAME --insecure 2>&1)
+
+# Check if SSL certificate information is present
+if echo "$output" | grep -q "SSL certificate"; then
+    echo "SSL certificate is being used. Test passed."
+	echo $output
+else
+    echo "No SSL certificate detected. Test failed."
+	if echo "$output" | grep -q "certificate has expired"; then
+    	echo "SSL certificate has expired. Test failed."
+	elif echo "$output" | grep -q "no alternative certificate subject name"; then
+    	echo "Certificate hostname mismatch. Test failed."
+	elif echo "$output" | grep -q "unable to get local issuer certificate"; then
+    	echo "SSL certificate not properly configured. Test failed."
+	else
+    	echo "Unknown SSL issue. Test failed."
+    exit 1
+fi
 
 
 # Get list of containers in the network
@@ -196,16 +217,10 @@ for container in $containers; do
         echo "❌ Failed to retrieve IP for $container. may not be providing seperate ips for containers, what type of network are the continaers using?"
         continue
     fi
-
     echo "Testing $container ($ip)..."
     # Scan all ports
     #scan_ports $container $ip
 	open_ports=$(scan_ports $container $ip)
-    # Test specific services
-    #if [ "$container" == "wordpress" ]; then
-    #    check_service_access $container $ip 9000 "HTTP"
-    #elif [ "$container" == "mariadb" ]; then
-    #    check_service_access $container $ip 3306 "SQL"
     if [ -n $open_prts ]; then
          check_service_access $continaer $ip "$open_ports"
     fi
@@ -231,7 +246,7 @@ else
 fi
 
 
-for var in '$DOMAIN_NAME' '$SECURE_PORT' '$WORDPRESS_PORT'; do
+for var in $DOMAIN_NAME $SECURE_PORT $WORDPRESS_PORT; do
 {
 	if docker exec $nginx cat /etc/nginx/nginx.conf | grep "$var" ; then
 		echo "Test Failed: Environment variable $var was not substituted"
@@ -346,8 +361,3 @@ if [ $? -ne 0 ]; then
 fi
 
 # Test if SSL/TLS certificate is being served correctly
-docker exec $nginx curl -k -s --head https://localhost:${SECURE_PORT} | grep '200 OK'
-if [ $? -ne 0 ]; then
-	echo "Test Failed: SSL/TLS certificate not served correctly"
-	exit 1
-fi

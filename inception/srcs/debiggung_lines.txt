@@ -54,3 +54,6 @@ docker exec -it wordpress wp rewrite flush --hard
 ????
 docker exec -it wordpress cat /var/www/html/.htaccess
 docker exec -it wordpress cat /var/www/html/wp-content/debug.log
+
+
+docker exec nginx curl -k -s --resolve araveala.42.fr:443:127.0.0.1 https://araveala.42.fr:443/wp-admin/setup-config.php
